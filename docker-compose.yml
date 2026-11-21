@@ -30,7 +30,7 @@ services:
       - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
       - ./database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "mysql -h localhost -uroot -p$${MYSQL_ROOT_PASSWORD} -D $${MYSQL_DATABASE} -e 'SELECT 1 FROM products LIMIT 1' >/dev/null 2>&1"]
+      test: ["CMD-SHELL", "mysql -h localhost -uroot -p\"$${MYSQL_ROOT_PASSWORD}\" -D \"$${MYSQL_DATABASE}\" -e 'SELECT 1 FROM products LIMIT 1' >/dev/null 2>&1"]
       interval: 5s
       timeout: 5s
       retries: 20

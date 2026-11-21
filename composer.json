@@ -1,0 +1,20 @@
+{
+    "name": "emrekinay/stock-inventory",
+    "description": "PHP 8 and MySQL based stock inventory tracking application",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "php tests/run.php",
+        "serve": "php -S 127.0.0.1:8000 -t public public/router.php"
+    }
+}

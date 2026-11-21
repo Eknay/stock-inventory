@@ -1,0 +1,12 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+/config/config.php
+/storage/logs/*
+vendor
+coverage
+.idea
+.vscode
+.DS_Store
